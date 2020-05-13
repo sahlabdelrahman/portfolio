@@ -1,0 +1,50 @@
+.project {
+    box-shadow: $mainShadow;
+    transition: $mainTransition;
+    &:hover {
+        box-shadow: $darkShadow;
+    }
+
+    .img-container {
+        position: relative;
+        img {
+            width: 100%;
+            display: block;
+            transition: $mainTransition;
+        }
+        &:hover {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        &:hover .project-link {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        &:hover img {
+            opacity: 0.3;
+        }
+    }
+
+    .project-link {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: scale(0);
+        transition: $mainTransition;
+        text-decoration: none;
+    }
+
+    .project-name {
+        text-transform: capitalize;
+        padding: 0.5rem 0;
+        text-align: center;
+        font-weight: 700;
+        letter-spacing: $mainSpacing;
+    }
+
+    @media (max-width: 767px) {
+        margin: 50px 0;
+    }
+
+    @media (min-width: 768px) {
+        margin: 30px 0;
+    }
+}

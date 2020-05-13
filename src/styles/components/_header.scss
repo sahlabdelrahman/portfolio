@@ -1,0 +1,23 @@
+nav {
+    .navbar-brand {
+        position: relative;
+        font-weight: 900;
+        font-size: 26px;
+        z-index: 0;
+        span{
+            color: #FFF;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -12px;
+                width: 40px;
+                height: 40px;
+                background: $mainColor;
+                z-index: -1;
+                transform: translateY(-50%);
+                border-radius: 50%;
+            }
+        }
+    }
+}
